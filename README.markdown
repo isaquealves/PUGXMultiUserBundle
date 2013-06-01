@@ -9,6 +9,28 @@ This branch (2.0) supports FOSUserBundle 2.0 and Symfony >=2.1, <2.4
 
 Total Downloads [![Total Downloads](http://poser.pagodabox.com/pugx/multi-user-bundle/d/total.png)](https://packagist.org/packages/pugx/multi-user-bundle)
 
+[![Downloads](https://poser.pugx.org/pugx/multi-user-bundle/d/total.png)](https://packagist.org/packages/pugx/multi-user-bundle)
+[![Latest Stable Version](https://poser.pugx.org/pugx/multi-user-bundle/version.png)](https://packagist.org/packages/pugx/multi-user-bundle)
+[![Latest Unstable Version](https://poser.pugx.org/pugx/multi-user-bundle/v/unstable.png)](https://packagist.org/packages/pugx/multi-user-bundle)
+
+This branch (master) supports FOSUserBundle master and Symfony master.
+[![Build Status](https://secure.travis-ci.org/PUGX/PUGXMultiUserBundle.png?branch=master)](http://travis-ci.org/PUGX/PUGXMultiUserBundle)
+
+The branch (2.0) supports FOSUserBundle 2.0 and Symfony 2.1.
+[![Build Status](https://secure.travis-ci.org/PUGX/PUGXMultiUserBundle.png?branch=2.0)](http://travis-ci.org/PUGX/PUGXMultiUserBundle)
+
+The branch (1.4) supports FOSUserBundle 1.3 and Symfony 2.1 with new approach
+[![Build Status](https://secure.travis-ci.org/PUGX/PUGXMultiUserBundle.png?branch=1.4)](http://travis-ci.org/PUGX/PUGXMultiUserBundle)
+
+For the old implementation see:
+
+The branch (1.3) supports FOSUserBundle 1.3 and Symfony 2.1 
+[![Build Status](https://secure.travis-ci.org/PUGX/PUGXMultiUserBundle.png?branch=1.3)](http://travis-ci.org/PUGX/PUGXMultiUserBundle)
+
+The branch (1.2) supports FOSUserBundle 1.2 and Symfony 2.0
+[![Build Status](https://secure.travis-ci.org/PUGX/PUGXMultiUserBundle.png?branch=1.2)](http://travis-ci.org/PUGX/PUGXMultiUserBundle)
+>>>>>>> Update README.markdown
+
 
 Documentation
 -------------
