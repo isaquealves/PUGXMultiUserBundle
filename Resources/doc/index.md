@@ -25,6 +25,8 @@ This version of the bundle requires Symfony dev-master and FOSUserBundle dev-mas
 6. Create your controllers
 7. Using the User Manager
 
+>>>>>>> Update index.md
+
 ### 1. Download PUGXMultiUserBundle
 
 **Using composer**
@@ -171,7 +173,8 @@ fos_user:
         user_manager: pugx_user_manager
 ```
 
-Acme\UserBundle\Entity\User must be an abstract class, because you don't have to use it.
+**Note:**
+> Acme\UserBundle\Entity\User must be an abstract class, because you don't have to use it.
 In fact is the discriminator that has responsibility to get the user class depending on context.
 
 ### 5. Configure the PUGXMultiUserBundle
@@ -225,9 +228,11 @@ user_two_registration:
     defaults: { _controller: AcmeUserBundle:RegistrationUserTwo:register }
 ```
 
-You can disable the default route registration coming from FOSUser or you have to manage it for prevent incorrect registration
+**Note:**
+> You have to disable the default route registration coming from FOSUser and create your own template or you have to manage it for prevent incorrect registration 
 
-Controller
+
+Controllers
 
 RegistrationUserOne
 
@@ -269,7 +274,12 @@ class RegistrationUserTwo extends BaseController
 }
 ```
 
-For now only registration and profile form factories are wrapped; 
+
+**Note:**
+
+> Remember to create the templates for registration form with correct routes
+
+> For now only registration and profile form factories are wrapped; 
 if you need creat a custom FormType you have to inject the discriminator.
 
 ### 7. Using the User Manager
