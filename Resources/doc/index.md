@@ -169,7 +169,7 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: Acme\UserBundle\Entity\User
-      service:
+    service:
         user_manager: pugx_user_manager
 ```
 
