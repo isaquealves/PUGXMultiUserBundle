@@ -12,6 +12,8 @@ Total Downloads [![Total Downloads](http://poser.pagodabox.com/pugx/multi-user-b
 [![Downloads](https://poser.pugx.org/pugx/multi-user-bundle/d/total.png)](https://packagist.org/packages/pugx/multi-user-bundle)
 [![Latest Stable Version](https://poser.pugx.org/pugx/multi-user-bundle/version.png)](https://packagist.org/packages/pugx/multi-user-bundle)
 [![Latest Unstable Version](https://poser.pugx.org/pugx/multi-user-bundle/v/unstable.png)](https://packagist.org/packages/pugx/multi-user-bundle)
+[![Latest Stable Version](https://poser.pugx.org/pugx/multi-user-bundle/v/stable.png)](https://packagist.org/packages/pugx/multi-user-bundle) [![Total Downloads](https://poser.pugx.org/pugx/multi-user-bundle/downloads.png)](https://packagist.org/packages/pugx/multi-user-bundle) [![Latest Unstable Version](https://poser.pugx.org/pugx/multi-user-bundle/v/unstable.png)](https://packagist.org/packages/pugx/multi-user-bundle) [![License](https://poser.pugx.org/pugx/multi-user-bundle/license.png)](https://packagist.org/packages/pugx/multi-user-bundle)
+>>>>>>> Update README.markdown
 
 This branch (master) supports FOSUserBundle master and Symfony master.
 [![Build Status](https://secure.travis-ci.org/PUGX/PUGXMultiUserBundle.png?branch=master)](http://travis-ci.org/PUGX/PUGXMultiUserBundle)
