@@ -84,6 +84,7 @@ class Configuration implements ConfigurationInterface
                                             ->end()
                                         ->end()
                                     ->end()
+                                    ->scalarNode('template')->defaultValue(null)->end()
                                  ->end()
                             ->end()
                         ->end()
