@@ -53,7 +53,7 @@ $ php composer.phar update pugx/multi-user-bundle
 
 ### 2. Enable the bundle
 
-Enable the bundle in the kernel:
+Enable the bundles in the kernel:
 
 ``` php
 <?php
@@ -64,6 +64,7 @@ public function registerBundles()
     $bundles = array(
         // ...
         new PUGX\MultiUserBundle\PUGXMultiUserBundle(),
+        new FOS\UserBundle\FOSUserBundle(),
     );
 }
 ```
@@ -72,7 +73,7 @@ public function registerBundles()
 
 Create entities using Doctrine2 inheritance.
 
-Abstract User that directly extends FOS\UserBundle\Entity\User
+Abstract User that directly extends the model FOS\UserBundle\Model\User
 
 ``` php
 <?php
@@ -80,7 +81,7 @@ Abstract User that directly extends FOS\UserBundle\Entity\User
 namespace Acme\UserBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use FOS\UserBundle\Entity\User as BaseUser;
+use FOS\UserBundle\Model\User as BaseUser;
 
 /**
  * @ORM\Entity
