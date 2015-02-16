@@ -3,6 +3,8 @@
 namespace PUGX\MultiUserBundle\Model;
 
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 
 /**
  * Description of UserDiscriminator
@@ -10,7 +12,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
  * @author leonardo proietti (leonardo.proietti@gmail.com)
  * @author eux (eugenio@netmeans.net)
  */
-class UserDiscriminator
+class UserDiscriminator implements ContainerAwareInterface
 {
     const SESSION_NAME = 'pugx_user.user_discriminator.class';
 
@@ -20,6 +22,11 @@ class UserDiscriminator
      */
     protected $session;
 
+    /**
+     * @var ContainerInterface
+     */
+    protected $container;
+    
     /**
      *
      * @var array Configuration built from the parameters in config file
@@ -62,10 +69,11 @@ class UserDiscriminator
      * @param array $conf The configuration of PUGXMultiUserBundle
      * @param array $userTypes An array containing key-value pairs like this ('user_type' => 'user_entity')
      */
-    public function __construct(SessionInterface $session, array $conf, array $userTypes)
+    public function __construct(SessionInterface $session, ContainerInterface $container, array $conf, array $userTypes)
     {
         $this->session = $session;
         $this->conf = $conf;
+        $this->setContainer($container);
         $this->userTypes = $userTypes;
     }
 
@@ -177,8 +185,8 @@ class UserDiscriminator
             throw new \InvalidArgumentException(sprintf('UserDiscriminator, error getting form type : "%s" not found', $className));
         }
 
-        $type = new $className($class);
-
+        $type = new $className($class, $this->container );
+        
         return $type;
     }
 
@@ -211,4 +219,9 @@ class UserDiscriminator
         return $this->conf[$this->getClass()][$name]['template'];
     }
 
+
+    public function setContainer(ContainerInterface $container= null)
+    {
+        $this->container = $container;
+    }
 }

@@ -5,6 +5,7 @@ services:
         class:     PUGX\MultiUserBundle\Model\UserDiscriminator
         arguments:
              session: "@session"
+             container: "@service_container"
              conf: %pugx_user.discriminator.conf%
              userTypes: %pugx_user.discriminator.user_types%
 
