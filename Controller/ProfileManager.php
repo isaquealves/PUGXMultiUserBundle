@@ -62,12 +62,15 @@ class ProfileManager
         $this->userDiscriminator->setClass($class);
 
         $this->controller->setContainer($this->container);
+
         $result = $this->controller->editAction($this->container->get('request'));
         if ($result instanceof RedirectResponse) {
             return $result;
         }
 
+        
         $template = $this->userDiscriminator->getTemplate('profile');
+        
         if (is_null($template)) {
             $engine = $this->container->getParameter('fos_user.template.engine');
             $template = 'FOSUserBundle:Profile:edit.html.'.$engine;

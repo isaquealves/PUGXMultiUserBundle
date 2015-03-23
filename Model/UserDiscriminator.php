@@ -86,7 +86,9 @@ class UserDiscriminator implements ContainerAwareInterface
         $classes = array();
         foreach ($this->conf as $entity => $conf) {
             $classes[] = $entity;
+
         }
+
 
         return $classes;
     }
@@ -106,6 +108,7 @@ class UserDiscriminator implements ContainerAwareInterface
         }
 
         $this->class = $class;
+
     }
 
     /**
@@ -186,7 +189,6 @@ class UserDiscriminator implements ContainerAwareInterface
         }
 
         $type = new $className($class, $this->container );
-        
         return $type;
     }
 
